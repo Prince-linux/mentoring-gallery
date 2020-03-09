@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 
-def home(request):
+def index(request):
     # return HttpResponse('Hello, World')
-    return render(request, 'gallery/index.html')
+    return render(request, 'gallery/index.html', {'message': 'Welcome to my gallery'})
 
