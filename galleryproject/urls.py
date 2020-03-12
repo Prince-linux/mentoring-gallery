@@ -16,9 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from gallery.views import index
+import gallery.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index)
+
+    path('', gallery.views.index),
+
+    path('signup/', gallery.views.signup, name='signup')
 ]
